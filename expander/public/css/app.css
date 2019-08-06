@@ -1,0 +1,83 @@
+.video__video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; }
+  @media (min-width: get-breakpoint(medium)) {
+    .video__video-wrapper {
+      height: 410px;
+      padding: 0; } }
+  .video__video-wrapper::after {
+    padding-top: 75%;
+    content: ""; }
+
+.video__wrapper {
+  position: relative; }
+
+.video__iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.video__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  -webkit-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+  transition: 0.4s ease; }
+  .video__overlay--active {
+    z-index: -1;
+    opacity: 0; }
+
+.video__play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  width: 100px;
+  height: 100px;
+  border: 0;
+  border-radius: 50%;
+  background-color: get-color(yellow);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform-origin: top;
+  -ms-transform-origin: top;
+  transform-origin: top;
+  cursor: pointer;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  -o-transition: transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s; }
+  .video__play-btn svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%); }
+  .video__play-btn::before {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 100%;
+    height: 100%;
+    border: 3px solid get-color(primary);
+    border-radius: 50%;
+    content: ""; }
+  .video__play-btn--active {
+    -webkit-transform: scale(0.4);
+    -ms-transform: scale(0.4);
+    transform: scale(0.4);
+    opacity: 0; }

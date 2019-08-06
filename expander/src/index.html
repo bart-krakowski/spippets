@@ -1,0 +1,26 @@
+{% extends 'layouts/layout.html' %}
+
+{% block title %}
+  Home
+{% endblock %}
+
+{% block content %}
+  <h1>HTML Front-end Boilerplate</h1>
+
+  <div data-expander data-active-classes='{"header": "foo", "body": "bar"}'>
+    <div data-ref="expander[item]" aria-expanded="false">
+      <button data-ref="expander[header]">header</button>
+      <div data-ref="expander[body]">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi nostrum expedita dolore fugiat a velit, ea qui adipisci similique perferendis necessitatibus libero rem numquam totam nihil corporis, recusandae ducimus id.
+      </div>
+    </div>
+    <div data-ref="expander[item]" aria-expanded="false">
+      <button data-ref="expander[header]">header</button>
+      <div data-ref="expander[body]">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi nostrum expedita dolore fugiat a velit, ea qui adipisci similique perferendis necessitatibus libero rem numquam totam nihil corporis, recusandae ducimus id.
+      </div>
+    </div>
+  </div>
+
+
+{% endblock %}
