@@ -1,0 +1,43 @@
+{
+  "name": "@tonik/cookies-box",
+  "version": "1.0.0",
+  "description": "A tiny vanilla JavaScript HTTP library.",
+  "author": "Tonik <hello@tonik.pl> (https://tonik.pl/)",
+  "homepage": "https://gitlab.com/tonikstudio/labs/snippets/cookies-box",
+  "main": "dist/cookies-box.js",
+  "module": "dist/cookies-box.esm.js",
+  "unpkg": "dist/cookies-box.js",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/tonikstudio/labs/snippets/cookies-box.git"
+  },
+  "bugs": {
+    "url": "https://gitlab.com/tonikstudio/labs/snippets/cookies-box/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "cookies-box",
+    "ajax"
+  ],
+  "scripts": {
+    "build:esm": "rollup --config build/esm.js",
+    "build:umd": "rollup --config build/umd.js && rollup --config build/umd.min.js",
+    "build": "npm run build:esm && npm run build:umd"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^5.0.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-node": "^7.0.0",
+    "eslint-plugin-promise": "^4.0.0",
+    "eslint-plugin-standard": "^4.0.0",
+    "rollup": "^0.62.0",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-uglify": "^2.0.1"
+  }
+}
